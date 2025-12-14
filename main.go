@@ -1,3 +1,27 @@
+// Package main implements go-last, a Go port of the util-linux last command.
+//
+// The last command displays information about user logins and system events
+// by reading the wtmp or btmp files. It shows login times, logout times,
+// and session durations.
+//
+// Usage:
+//
+//	go-last [options] [username] [tty]
+//
+// Options:
+//
+//	-f file        Use a specific file instead of /var/log/wtmp
+//	-n num         Limit the number of lines to display
+//	-R             Don't display the hostname field
+//	-a             Display hostname in the last column
+//	-w             Display full user and domain names
+//	-x             Display system shutdown entries and run level changes
+//	-F             Print full login and logout times and dates
+//	-d             Translate IP addresses to hostnames via DNS
+//	-i             Display IP addresses in numeric format
+//	-s time        Display logins since the specified time
+//	-t time        Display logins until the specified time
+//	-p time        Display who were present at the specified time
 package main
 
 import (
